@@ -27,7 +27,7 @@ const allBooks = (req, res) => {
 };
 const updateBooks = (req, res) => {
   const { title, author, quantity } = req.body;
-  return Books.findByPk(req.params.bCCookId)
+  return Books.findByPk(req.params.bookId)
     .then((books) => {
       books
         .update({
